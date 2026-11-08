@@ -1,0 +1,53 @@
+# ---- droidtape-specific ------------------------------------------------
+# Recordings contain screenshots and UI trees from real devices and can
+# include personal data. NEVER commit them. Share only redacted exports.
+runs/
+.droidtape/
+*.droidtape-run
+
+# Local configuration and secrets
+droidtape.local.*
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---- Test output ---------------------------------------------------------
+test-results/
+reports/
+junit*.xml
+
+# ---- Language / tooling (stack not yet decided; covers likely candidates)
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+.coverage
+htmlcov/
+
+# Rust
+target/
+
+# Node / TypeScript
+node_modules/
+.npm/
+*.tsbuildinfo
+
+# ---- Editors and OS ------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ---- Android tooling artifacts ------------------------------------------
+*.hprof
+local.properties
